@@ -3,9 +3,6 @@
 Halaman biolink (link-in-bio) resmi **Direktorat Jenderal Pemasyarakatan**, Kementerian Imigrasi dan Pemasyarakatan.  
 Dirancang sebagai pusat akses terpadu ke seluruh kanal media, layanan publik, dan informasi resmi Ditjen Pemasyarakatan.
 
-🔗 **Live Demo**: [https://[username].github.io/[repo-name]](https://[username].github.io/[repo-name])  
-*(Ganti `[username]` dan `[repo-name]` dengan milik Anda setelah deploy)*
-
 ---
 
 ## 🎯 Fitur Utama
