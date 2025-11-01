@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ditjen Pemasyarakatan | Kanal Media Resmi</title>
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Biolink Ditjenpas" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <style>
+    :root {
+      --primary: #07213d;
+      --white: #ffffff;
+      --light-gray: #f5f5f5;
+      --border: #e0e0e0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      color: var(--primary);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 500px;
+      margin: 20px auto;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+
+    .header {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--primary);
+      color: var(--white);
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .header p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: var(--white);
+      font-size: 1.4rem;
+      transition: transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .website-link {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      margin-top: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .website-link:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .website-link i {
+      margin-right: 8px;
+      font-size: 1.1rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      margin: 30px 0 15px 20px;
+      color: var(--primary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-title i {
+      margin-right: 10px;
+      color: var(--primary);
+    }
+
+    .link-list {
+      list-style: none;
+      padding: 0 20px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      background: var(--light-gray);
+      margin: 8px 0;
+      padding: 15px 20px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      font-size: 1rem;
+    }
+
+    .link-item:hover {
+      background: #eef2f7;
+      transform: translateX(4px);
+      border-color: var(--primary);
+    }
+
+    .link-icon {
+      margin-right: 12px;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .map-container {
+      padding: 0 20px 30px;
+      width: 100%;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 20px;
+      padding: 15px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 500px) {
+      body {
+        margin: 10px;
+        padding: 15px;
+        max-width: 100%;
+      }
+      .header {
+        padding: 20px 15px;
+      }
+      .logo {
+        width: 100px;
+      }
+      .header h1 {
+        font-size: 1.3rem;
+      }
+      .section-title {
+        font-size: 1rem;
+        margin: 25px 0 10px 15px;
+      }
+      .link-item {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+      }
+      .map-container iframe {
+        height: 200px;
+      }
+      .footer {
+        font-size: 0.75rem;
+        padding: 10px 0;
+      }
+      .website-link {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 600px;
+        box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+      }
+      .logo {
+        width: 150px;
+      }
+      .header h1 {
+        font-size: 1.7rem;
+      }
+      .map-container iframe {
+        height: 300px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        max-width: 700px;
+        padding: 40px;
+      }
+      .logo {
+        width: 180px;
+      }
+      .header h1 {
+        font-size: 2rem;
+      }
+      .map-container iframe {
+        height: 400px;
+      }
+    }
+  </style>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="Logo Ditjen Pemasyarakatan" class="logo" />
+    <h1>Ditjen Pemasyarakatan</h1>
+    <p>Kanal Media Resmi Direktorat Jenderal Pemasyarakatan</p>
+    <div class="social-icons">
+      <a href="https://wa.me/6282170002704" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:humasditjenpas@yahoo.co.id" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://x.com/DITJEN_PAS" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://facebook.com/DitjenPAS" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/ditjenpas/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@ditjenpemasyarakatan" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/@Ditjenpemasyarakatan" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+    </div>
+    <a href="https://www.ditjenpas.go.id" class="website-link" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-globe"></i> Website Resmi
+    </a>
+  </div>
+
+  <div class="section-title">
+    <i class="fas fa-tv"></i> Media & Informasi
+  </div>
+  <ul class="link-list">
+    <li><a href="https://www.youtube.com/@Ditjenpemasyarakatan" class="link-item" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon"><i class="fab fa-youtube"></i></span> YouTube PAS TV
+    </a></li>
+    <li><a href="https://www.youtube.com/watch?v=u71gcMY5svw" class="link-item" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon"><i class="fas fa-building"></i></span> Video Office Tour Ditjen Pemasyarakatan
+    </a></li>
+    <!-- "Website Resmi" sudah dipindah ke header -->
+  </ul>
+
+  <div class="section-title">
+    <i class="fas fa-headset"></i> Layanan Publik
+  </div>
+  <ul class="link-list">
+    <li><a href="https://wa.me/6281234567890" class="link-item" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon"><i class="fas fa-comments"></i></span> Layanan Informasi (WhatsApp)
+    </a></li>
+    <li><a href="https://wa.me/6281234567890" class="link-item" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon"><i class="fas fa-headset"></i></span> Layanan Pengaduan (WhatsApp)
+    </a></li>
+  </ul>
+
+  <div class="section-title">
+    <i class="fas fa-pencil-alt"></i> Kontributor
+  </div>
+  <ul class="link-list">
+    <li><a href="mailto:berita@ditjenpas.go.id" class="link-item">
+      <span class="link-icon"><i class="fas fa-newspaper"></i></span> Kirim Berita untuk Apa Kabar Pemasyarakatan
+    </a></li>
+    <li><a href="mailto:webmaster@ditjenpas.go.id" class="link-item">
+      <span class="link-icon"><i class="fas fa-envelope-open-text"></i></span> Kirim Berita untuk laman ditjenpas.go.id
+    </a></li>
+    <li><a href="mailto:foto@ditjenpas.go.id?subject=%23LensaPAS" class="link-item">
+      <span class="link-icon"><i class="fas fa-camera"></i></span> Kirim Foto untuk #LensaPAS
+    </a></li>
+  </ul>
+
+  <div class="section-title">
+    <i class="fas fa-map-marker-alt"></i> Kantor Kami
+  </div>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.720894693161!2d106.82602539999999!3d-6.1681169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d0f285f2e3%3A0xbbded39d4711363!2sDirektorat%20Jenderal%20Pemasyarakatan!5e0!3m2!1sid!2sid!4v1761897386962!5m2!1sid!2sid"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Direktorat Jenderal Pemasyarakatan</p>
+  </div>
+</body>
+</html>
